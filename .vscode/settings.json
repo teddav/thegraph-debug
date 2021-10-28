@@ -1,0 +1,13 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": false
+    },
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false,
+    "files.eol": "\n",
+    "eslint.validate": [
+        "js",
+        "json",
+        "ts"
+    ]
+}

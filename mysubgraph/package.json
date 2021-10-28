@@ -1,0 +1,17 @@
+{
+  "name": "mysubgraph",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "graph codegen && graph build",
+    "create-local": "graph create --node http://localhost:8020/ mysubgraph/sub",
+    "remove-local": "graph remove --node http://localhost:8020/ mysubgraph/sub",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 mysubgraph/sub",
+    "deploy": "graph deploy --studio justatest"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "^0.22.3",
+    "@graphprotocol/graph-ts": "^0.22.1",
+    "@types/node": "^16.11.1",
+    "typescript": "^4.4.4"
+  }
+}

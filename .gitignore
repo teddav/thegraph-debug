@@ -1,0 +1,10 @@
+.env
+yarn.lock
+node_modules
+
+mycontracts/artifacts
+mycontracts/cache
+mycontracts/deployments
+
+mysubgraph/build
+mysubgraph/generated

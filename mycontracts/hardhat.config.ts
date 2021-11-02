@@ -15,10 +15,10 @@ const config: HardhatUserConfig = {
             live: true,
             blockGasLimit: 125e5,
             hardfork: 'london',
-            forking: {
-                enabled: true,
-                url: process.env.ALCHEMY as string
-            },
+            // forking: {
+            //     enabled: true,
+            //     url: process.env.ALCHEMY as string
+            // },
             mining: { auto: true },
             chainId: 1337,
         },

@@ -1,4 +1,4 @@
-type ContractAddresses @entity {
+type ContractAddr @entity {
   id: ID!
   addresses: [String!]
 }

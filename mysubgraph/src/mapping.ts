@@ -1,5 +1,5 @@
 import { BigInt, log, ethereum, Address } from '@graphprotocol/graph-ts'
-import { ContractAddresses } from "../generated/schema"
+import { ContractAddr } from "../generated/schema"
 import { AddedAddress, MyContract } from "../generated/MyContract/MyContract"
 
 export function handleEv(event: AddedAddress): void {
@@ -8,9 +8,18 @@ export function handleEv(event: AddedAddress): void {
     const value = contract.myaddresses(BigInt.fromString("0"));
     log.debug("LOGGING {}", [value.toHexString()])
 
-    const data = new ContractAddresses("abc")
+    const data = new ContractAddr("abc")
     data.addresses = ["0x834787f9728A2797Df987AEEDb6d3D7446E93282"]
     data.save()
 
-    // contract.try_myaddresses(BigInt.fromString("0"))
+    const result = contract.try_myaddresses(BigInt.fromString("50"))
+    if (result.reverted) {
+        log.debug("REVERTED", [])
+    } else {
+        log.debug("ALL GOOD {}", [])
+
+        // const data2 = new ContractAddr("def")
+        // data2.addresses = [result.value.toHexString()]
+        // data2.save()
+    }
 }
